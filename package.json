@@ -1,0 +1,22 @@
+{
+  "name": "twitter",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon -e js,twig,json -L ./bin/www",
+    "dev": "DEBUG=twitter:* npm start"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "express-session": "^1.16.2",
+    "http-errors": "~1.6.3",
+    "less-middleware": "~2.2.1",
+    "lodash": "^4.17.13",
+    "morgan": "~1.9.1",
+    "socket.io": "^2.2.0",
+    "socket.io-client": "^2.2.0",
+    "twig": "~0.10.3"
+  }
+}

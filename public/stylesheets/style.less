@@ -1,0 +1,64 @@
+@blueTw: #007bff;
+
+body {
+  margin: 0;
+  padding: 15px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: #fff;
+  text-align: center;
+
+  .Header {
+    display: flex;
+    justify-content: space-between;
+    .Logo_wrapper {
+      display: flex;
+      align-items: center;
+      .Logo {
+        height: 50px;
+        margin: 0 10px;
+      }
+    }
+  
+    .User_wrapper {
+      .User_picto {
+        height: 40px;
+        background-color: #fff;
+        border-radius: 50%;
+        padding: 5px;
+        margin: 0 10px;
+        border: 1px solid @blueTw;
+      }
+    } 
+  }
+
+  .Form_tweet {
+    display: flex;
+    button {
+      margin: 0 5px;
+    }
+  }
+
+  .Tweets {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    li {
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      padding: 10px;
+      position: relative;
+      transition: 0.3s;
+      height: fit-content;
+      min-height: 100px;
+      display: flex;
+      .Avatar img {
+        height: 40px;
+        margin-right: 10px;
+      }
+      .Author {
+        font-weight: bold;
+        color: @blueTw;
+      }
+    }
+  }
+}

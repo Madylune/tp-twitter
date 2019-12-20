@@ -1,0 +1,16 @@
+{% for tweet in tweets %}
+  <li>
+    <div class="Avatar">
+      <img src="/images/no-avatar.png" alt="Avatar"/>
+    </div>
+    <div>
+      <div class="Author">
+        {{ tweet.pseudo }}
+        <span class="text-muted tweetDate">{{ tweet.date | date('d/m/Y H:i:s') }}</span>
+      </div>
+      <div class="Content">
+        {{ tweet.message }}
+      </div>
+    </div>
+  </li>
+{% endfor %}

@@ -1,0 +1,43 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+    <div class="container">
+      <div class="row justify-content-md-center" id="loginArea" style="display:{{ user and user._id ? 'none' : 'flex' }}">
+      <form action="/users/login" method="post" class="col-12 col-md-6 mb-5" id="login-form" onsubmit="submitForm.bind(this)(event)">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="username/email" id="login-login" name="login">
+        </div>
+        <div class="input-group mb-3">
+          <input type="password" class="form-control" placeholder="Password" id="password-login" name="password">
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Identification</button>
+        <a href="#create-form" onclick="goto.bind(this)()">Je n'ai pas de compte</a>
+      </form>
+      <form action="/users/create" method="post" class="col-12 col-md-6 mb-5" id="create-form" style="display: none;" onsubmit="submitForm.bind(this)(event)">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Username" id="username-create" name="username">
+        </div>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="email" id="email-create" name="email">
+        </div>
+        <div class="input-group mb-3">
+          <input type="password" class="form-control" placeholder="Password" id="password-create" name="password">
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Création du compte</button>
+        <a href="#login-form" onclick="goto.bind(this)()">J'ai déjà un compte</a>
+      </form>
+      </div>
+
+      <div class="row justify-content-md-center" style="display:{{ user and user._id ? 'flex' : 'none' }}" id="tweetArea">
+        <form action="/tweets" method="post" class="Form_tweet col-12 col-md-6 mb-5" id="create-form" onsubmit="submitForm.bind(this)(event)">
+          <input type="text" class="form-control" placeholder="Ton message ..." id="tweet-create" name="message">
+          <button type="submit" class="Button btn btn-primary">Envoyer</button>
+        </form>
+        <ul class="Tweets" id="tweets">
+
+        </ul>
+      </div>
+    </div
+
+{% endblock %}
+
