@@ -13,7 +13,7 @@
     "express-session": "^1.17.1",
     "http-errors": "^1.6.3",
     "less-middleware": "^2.2.1",
-    "lodash": "^4.17.21",
+    "lodash": ">=4.17.21",
     "morgan": "^1.9.1",
     "socket.io": "^2.4.1",
     "socket.io-client": "^2.4.0",
